@@ -1,7 +1,31 @@
 // Assignment Code
 
-// Generate Function
+const resultId = document.getElementById('password');
+const lengthId = document.getElementById('password');
+const lowerCaseId = document.getElementById('password');
+const upperCaseId = document.getElementById('password');
+const numbersId = document.getElementById('password');
+const specialCharId = document.getElementById('password');
+const generateId = document.getElementById('password');
 
+
+
+
+const ranFunc = {
+  lowerCase: getRanLowerCase,
+  upperCase: getRanUpperCase,
+  number: getRanNumber,
+  specialChar: getRanSpecChar,
+
+}
+
+generateId.addEventListener('click', () => {
+  const length = lengthId.value;
+
+  console.log(length);
+});
+
+// Generator Functions
 function getRanLowerCase () {
   return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
 }
@@ -29,6 +53,7 @@ console.log(getRanSpecChar());
 
 
 
+
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
@@ -42,3 +67,12 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+
+
+// var passwordLength = prompt("How long is you password");
+// if (passwordLength == null || passwordLength == "") {
+//   txt = "Password not long enough.";
+// } else {
+//   txt = "Do you want lowercase letters?";
+// }
