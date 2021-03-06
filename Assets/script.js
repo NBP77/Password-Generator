@@ -70,9 +70,13 @@ generateBtn.addEventListener("click", writePassword);
 
 
 
-// var passwordLength = prompt("How long is you password");
-// if (passwordLength == null || passwordLength == "") {
-//   txt = "Password not long enough.";
-// } else {
-//   txt = "Do you want lowercase letters?";
+//  var passwordLength = prompt("How long is you password");
+//  if (passwordLength == null || passwordLength == "") {
+//  txt = "Password not long enough.";
+//  } else {
+//    txt = "Do you want lowercase letters?";
 // }
+
+function promptMe(){
+var passwordLength = prompt("How long do you want your password")
+};
