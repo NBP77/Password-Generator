@@ -1,22 +1,66 @@
 // Assignment Code
 
+
+// Setting up the prompt to start the password process
 var passwordLength = prompt("How many characters would you like your password to be?")
 
+// This says if the password length is less than 8 or greater than 128 an alret pops up that
+// your password length needs to be in between those numbers
 if (passwordLength < 8 || passwordLength > 128){
   alert("Length must be 8-128")
 }
+
 
 if (passwordLength >= 8 && passwordLength <= 128){
   var confirmUpper = confirm("Would you like to use uppercase letters?")
   var confirmLower = confirm("Would you like to use lowercase letters?")
   var confirmNumber = confirm("Would you like to use numbers?")
   var confirmCharacters = confirm("Would you like to use special characters?")
-
+}
 
 if(confirmUpper != true && confirmLower != true && confirmNumber != true && confirmCharacters != true){
   alert("you must select at least one character type!")
+};
+
+// DOM Elements 
+
+const resultEl = document.getElementById('password'); 
+
+document.getElementById('generate').addEventListener('click', () => {
+  const hasLower = confirmLower.true;
+  const hasUpper = confirmUpper.true;
+  const hasNumber = confirmNumber.true;
+  const hasChar = confirmCharacters.true;
+  resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasChar, length);
+});
+
+const ranFunc = {
+  lowerCase: getRanLowerCase,
+  upperCase: getRanUpperCase,
+  number: getRanNumber,
+  specialChar: getRanSpecChar
+
 }
 
+function generatePassword(lowerCase, upperCase, number, specialChar, length) {
+  let generatedPassword = '';
+  const typesCount = lowerCase + upperCase + number + specialChar;
+  const typesArr = [{lowerCase}, {upperCase}, {number}, {specialChar}].filter(item => Object.values(items)[0]);
+
+// Loop
+
+    for(let i=0; i<length; i+=typesCount) {
+          typesArr.forEach(type => {
+            const funcName = Object.keys(type)[0];
+            generatedPassword += ranFunc[funcName]();
+          });
+    }
+
+      const finalPassword = generatedPassword.slice(0, length);
+
+      return finalPassword;
+
+}
 
 
 
@@ -54,7 +98,6 @@ console.log(getRanSpecChar());
 
 
 
-
 // var generateBtn = document.querySelector("#generate");
 
 // // Write password to the #password input
@@ -83,10 +126,9 @@ console.log(getRanSpecChar());
 
 
 
-// const ranFunc = {
-//   lowerCase: getRanLowerCase,
-//   upperCase: getRanUpperCase,
-//   number: getRanNumber,
-//   specialChar: getRanSpecChar,
 
-}
+
+
+
+
+
