@@ -1,6 +1,17 @@
 // Assignment Code
 
 // Links HTML element
+
+var upperCaseArray = []
+var lowerCaseArray = ["a", "b", “c”, “d”, “e”, “f”, “g”, “h", “i”, “j”, “k”, “l”, “m”, “n”, “o”, “p”, “q”, “r”, “s”, “t”, “u”, “v”, “w”, “x”, “y”, “z”]
+var numberArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9,]
+var specialCharacterArray = ["!", "#", "$", "%", "&", "(", ")", "*", "+", "-", ".", "/", ":", ";", "<", =>?@[]\^_{|}~]
+
+var potentialArray = []
+var finalPasswordArray = []
+
+// potentialArray.push(?)
+
 function doPassword() {
 document.getElementById("password").value = password;}
 
@@ -27,6 +38,28 @@ if(confirmUpper != true && confirmLower != true && confirmNumber != true && conf
   alert("you must select at least one character type!")
 };
 
+if (confirmUpper) {
+  potentialArray.push(upperCaseArray)
+}
+// if (confirmUpper) {
+//   potentialArray.push(upperCaseArray)
+// }
+// if (confirmUpper) {
+//   potentialArray.push(upperCaseArray)
+// }
+// if (confirmUpper) {
+//   potentialArray.push(upperCaseArray)
+// }
+
+for (var i = 0; i < passwordLength.length; i++) {
+// random char from potential array
+
+// I will push random char onto finalpassword array
+}
+
+// turn final password array into a string and console log it 
+
+
 // DOM Elements 
 
 const resultEl = document.getElementById('password'); 
@@ -36,7 +69,7 @@ document.getElementById('generate').addEventListener('click', () => {
   const hasUpper = confirmUpper.true;
   const hasNumber = confirmNumber.true;
   const hasChar = confirmCharacters.true;
-  resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasChar, length);
+  resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasChar, passwordLength);
 });
 
 const ranFunc = {
@@ -48,9 +81,12 @@ const ranFunc = {
 }
 
 function generatePassword(lowerCase, upperCase, number, specialChar, length) {
-  let generatedPassword = '';
+  let generatedPassword = [];
   const typesCount = lowerCase + upperCase + number + specialChar;
   const typesArr = [{lowerCase}, {upperCase}, {number}, {specialChar}].filter(items => Object.values(items)[0]);
+
+  
+  console.log(generatedPassword)
 
 // Loop
 
@@ -63,8 +99,13 @@ function generatePassword(lowerCase, upperCase, number, specialChar, length) {
 
       const finalPassword = generatedPassword.slice(0, length);
 
+      console.log(finalPassword)
+      
       return finalPassword;
 
+      
+
+     
 }
 
 
@@ -76,30 +117,32 @@ function generatePassword(lowerCase, upperCase, number, specialChar, length) {
 // });
 
 // Generator Functions/ Random functions to get lowercase, uppercase, number and special character//
-function getRanLowerCase () {
-  return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
-}
 
-console.log(getRanLowerCase()); 
+// function getRanLowerCase () {
+//   return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
+// }
 
-function getRanUpperCase () {
-  return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
-}
 
-console.log(getRanUpperCase());
+// console.log(getRanLowerCase()); 
 
-function getRanNumber () {
-  return Math.floor(Math.random() * 100);
-}
+// function getRanUpperCase () {
+//   return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
+// }
 
-console.log(getRanNumber()); 
+// console.log(getRanUpperCase());
 
-function getRanSpecChar (){
-  const special = '!"#$%&()*+,-./:;<=>?@[]\^_{|}~' ;
-  return special[Math.floor(Math.random() * special.length)]
-}
+// function getRanNumber () {
+//   return Math.floor(Math.random() * 100);
+// }
 
-console.log(getRanSpecChar());
+// console.log(getRanNumber()); 
+
+// function getRanSpecChar (){
+//   const special = '!"#$%&()*+,-./:;<=>?@[]\^_{|}~' ;
+//   return special[Math.floor(Math.random() * special.length)]
+// }
+
+// console.log(getRanSpecChar());
 
 
 
