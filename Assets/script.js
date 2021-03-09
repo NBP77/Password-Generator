@@ -1,5 +1,9 @@
 // Assignment Code
 
+// Links HTML element
+function doPassword() {
+document.getElementById("password").value = password;}
+
 
 // Setting up the prompt to start the password process
 var passwordLength = prompt("How many characters would you like your password to be?")
@@ -10,7 +14,7 @@ if (passwordLength < 8 || passwordLength > 128){
   alert("Length must be 8-128")
 }
 
-
+// This goes to the next step and ask the follwing questions to confirm
 if (passwordLength >= 8 && passwordLength <= 128){
   var confirmUpper = confirm("Would you like to use uppercase letters?")
   var confirmLower = confirm("Would you like to use lowercase letters?")
@@ -18,6 +22,7 @@ if (passwordLength >= 8 && passwordLength <= 128){
   var confirmCharacters = confirm("Would you like to use special characters?")
 }
 
+// If none of those choices are selected then an alert pops up
 if(confirmUpper != true && confirmLower != true && confirmNumber != true && confirmCharacters != true){
   alert("you must select at least one character type!")
 };
@@ -45,7 +50,7 @@ const ranFunc = {
 function generatePassword(lowerCase, upperCase, number, specialChar, length) {
   let generatedPassword = '';
   const typesCount = lowerCase + upperCase + number + specialChar;
-  const typesArr = [{lowerCase}, {upperCase}, {number}, {specialChar}].filter(item => Object.values(items)[0]);
+  const typesArr = [{lowerCase}, {upperCase}, {number}, {specialChar}].filter(items => Object.values(items)[0]);
 
 // Loop
 
@@ -70,7 +75,7 @@ function generatePassword(lowerCase, upperCase, number, specialChar, length) {
 //   console.log(length);
 // });
 
-// Generator Functions
+// Generator Functions/ Random functions to get lowercase, uppercase, number and special character//
 function getRanLowerCase () {
   return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
 }
@@ -113,15 +118,6 @@ console.log(getRanSpecChar());
 // generateBtn.addEventListener("click", writePassword);
 
 
-
-
-// // const resultId = document.getElementById('password');
-// // const lengthId = document.getElementById('password');
-// // const lowerCaseId = document.getElementById('password');
-// // const upperCaseId = document.getElementById('password');
-// // const numbersId = document.getElementById('password');
-// // const specialCharId = document.getElementById('password');
-// // const generateId = document.getElementById('password');
 
 
 
