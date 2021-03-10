@@ -4,15 +4,17 @@ A random password generator
 
 ## Description
 
--The main goal for this project was to creat a portfolio website that can hold all of the projects I will create during this program. 
+-The main goal for this project was to create a random password generator that would spit out a random password. 
  
--Each img has a link to my projects, the first is the Horiseon-Refactor I completed and the rest will fill in as the class progresses. 
+-At first I took a different aproach bye creating functions for each password category. 
  
--It was tough to match the exact layout that was provided because I am still getting used to using flexbox, some of the elements are not responsive with mobile devices.
+-Then I found out the best way to do it was to create simple arrays for each and try to push and randomize them.
 
--If I had the time I would have gone back and tried to put everything into flexbox instead of using absolute positioning. 
+-I realized this at the last moment and had to scramble to get new code in. 
 
--At the end you are still able to view my profile, get my contacts, use the nav bar and view my projects. 
+-At the moment the prompts come up asking you the questions about what you want in your password, but the password never gets displayed. 
+
+-I will be working on this in more depth and fixing it. 
 
 ## Installation
 
@@ -26,18 +28,13 @@ GitHub pages: https://nbp77.github.io/Nicks-Portfolio/
 
 Examples:
 
--Functional nav and contact bar
+-Prompts you to ask about what password you want
 
--Href directing you to ids on the page
+-Has functioning console logs that show you code is working 
 
--Clickable profile picture to social media 
+-Completes the whole password proccess but is not at the point where it shows you the password when you hit the button 
 
--Hover effects on clickable imgs and links
-
--Big img for first project 
-
--Semantic HTML elements 
 
 ## Credits
 
-I think the biggest resource for me was google, using it to look up flexbox and css positioning tips.  
+Started off with google but at the end my biggest resources where my teachers. 
