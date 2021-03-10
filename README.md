@@ -20,9 +20,9 @@ A random password generator
 
 To check the project, I worked on click on these links: 
 
-GitHub: https://github.com/NBP77/Nicks-Portfolio
+GitHub: https://github.com/NBP77/Password-Generator
 
-GitHub pages: https://nbp77.github.io/Nicks-Portfolio/ 
+GitHub pages: https://nbp77.github.io/Password-Generator/
 
 ## Usage
 
