@@ -17,12 +17,17 @@ console.log(specialCharacterArray)
 
 var potentialArray = []
 var finalPasswordArray = []
-
+console.log(finalPasswordArray)
 // potentialArray.push(?)
 
-function doPassword() {
-document.getElementById("password").value = password;}
+// function for selecting random characters from arrays 
+// function randomGenerator(aryIndex){
+//   var randomIndex = Math.floor(Math.random() * aryIndex.length);
+//   return randomIndex;
+// }
 
+function doPassword() {
+document.getElementById("password").value = password;
 
 // Setting up the prompt to start the password process
 var passwordLength = prompt("How many characters would you like your password to be?")
@@ -36,40 +41,49 @@ if (passwordLength < 8 || passwordLength > 128){
 // This goes to the next step and ask the follwing questions to confirm
 if (passwordLength >= 8 && passwordLength <= 128){
   var confirmUpper = confirm("Would you like to use uppercase letters?")  
-}
-if (confirmUpper === true){
-  var confirmLower = confirm("Would you like top use lowercase letters?")
-}
-if (confirmLower === true){
+  var confirmLower = confirm("Would you like to use lowercase letters?")
   var confirmNumber = confirm("Would you like to use numbers?")
-}
-if (confirmNumber === true){
   var confirmSpecialCharcters = confirm("Would you like to use a special character?")
+
+finalPasswordArray.push(upperCaseArray) 
+// requires randomization
 }
-// If none of those choices are selected then an alert pops up
-if(confirmUpper != true && confirmLower != true && confirmNumber != true && confirmSpecialCharcters != true){
-  alert("you must select at least one character type!")
-};
+
+// // If none of those choices are selected then an alert pops up
+
+// if(confirmUpper != true && confirmLower != true && confirmNumber != true && confirmSpecialCharcters != true){
+//   alert("you must select at least one character type!")
+// };
 
 if (confirmUpper) {
-  potentialArray.push(upperCaseArray)
+  potentialArray.join(upperCaseArray)
 }
 if (confirmLower) {
-  potentialArray.push(lowerCaseArray)
+  potentialArray.join(lowerCaseArray)
 }
 if (confirmNumber) {
-  potentialArray.push(numberArray)
+  potentialArray.join(numberArray)
 }
 if (confirmSpecialCharcters) {
-  potentialArray.push(specialCharacterArray)
+  potentialArray.join(specialCharacterArray)
 }
-
+console.log(passwordLength);
+var randomCharacter;
 for (var i = 0; i < passwordLength.length; i++) {
-// random char from potential array
+
+randomCharacter = potentialArray[Math.floor(Math.random() * potentialArray.length)]
+console.log(randomCharacter);
+
+finalPasswordArray.push(randomCharacter)
+  // random char from potential array
 
 // I will push random char onto finalpassword array
 }
-
+console.log(finalPasswordArray)
+console.log("!!!!")
+console.log(potentialArray.length)
+console.log(potentialArray)
+}
 // turn final password array into a string and console log it 
 
 
