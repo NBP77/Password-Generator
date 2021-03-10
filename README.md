@@ -32,7 +32,7 @@ Examples:
 
 -Has functioning console logs that show you code is working 
 
--Completes the whole password proccess but is not at the point where it shows you the password when you hit the button 
+-Completes the whole password proccess but is not at the point where it shows you the password when you hit the button.
 
 
 ## Credits
