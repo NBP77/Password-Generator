@@ -56,34 +56,34 @@ finalPasswordArray.push(upperCaseArray)
 // };
 
 if (confirmUpper) {
-  potentialArray.join(upperCaseArray)
+  potentialArray = potentialArray.concat(upperCaseArray);
 }
 if (confirmLower) {
-  potentialArray.join(lowerCaseArray)
+  potentialArray = potentialArray.concat(lowerCaseArray);
 }
 if (confirmNumber) {
-  potentialArray.join(numberArray)
+  potentialArray = potentialArray.concat(numberArray);
 }
 if (confirmSpecialCharcters) {
-  potentialArray.join(specialCharacterArray)
+  potentialArray = potentialArray.concat(specialCharacterArray);
 }
 console.log(passwordLength);
 var randomCharacter;
-for (var i = 0; i < passwordLength.length; i++) {
+for (var i = 0; i < passwordLength; i++) {
 
 randomCharacter = potentialArray[Math.floor(Math.random() * potentialArray.length)]
 console.log(randomCharacter);
 
-finalPasswordArray.push(randomCharacter)
   // random char from potential array
 
 // I will push random char onto finalpassword array
 }
-console.log(finalPasswordArray)
-console.log("!!!!")
-console.log(potentialArray.length)
-console.log(potentialArray)
+return finalPasswordArray.join("");
 }
+
+console.log("!!!!")
+console.log(finalPasswordArray)
+
 // turn final password array into a string and console log it 
 
 
