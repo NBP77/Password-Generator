@@ -44,8 +44,6 @@ if (passwordLength >= 8 && passwordLength <= 128){
   var confirmLower = confirm("Would you like to use lowercase letters?")
   var confirmNumber = confirm("Would you like to use numbers?")
   var confirmSpecialCharcters = confirm("Would you like to use a special character?")
-
-finalPasswordArray.push(upperCaseArray) 
 // requires randomization
 }
 
@@ -74,15 +72,17 @@ for (var i = 0; i < passwordLength; i++) {
 randomCharacter = potentialArray[Math.floor(Math.random() * potentialArray.length)]
 console.log(randomCharacter);
 
-  // random char from potential array
+finalPasswordArray.push(randomCharacter); 
 
-// I will push random char onto finalpassword array
 }
+
 return finalPasswordArray.join("");
+
 }
+
 
 console.log("!!!!")
-console.log(finalPasswordArray)
+
 
 // turn final password array into a string and console log it 
 
